@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">YuKeyRing</string>
+    <string name="create_key">Create Key</string>
+    <string name="verify_key">Verify Key</string>
+    <string name="action_remove_key">Remove Key</string>
+    <string name="action_get_cos_version">Get COS Version</string>
+    <string name="enroll_fail">has fingerprint, to delete fingerprint first</string>
+    <string name="enroll_waiting_for_finger_on">wait for finger on</string>
+    <string name="enroll_finger_covered_sensor">finger covered partial sensor</string>
+    <string name="enroll_finger_up">checking fingerprint, release finger</string>
+    <string name="enroll_change_finger">Change finger</string>
+    <string name="enroll_finger_left_or_right">finger left or right</string>
+    <string name="create_success">created success</string>
+    <string name="verify_fail">No matched!!</string>
+    <string name="verify_success">Matched!!</string>
+    <string name="verify_again">try again</string>
+    <string name="delete_fail">delete fail</string>
+    <string name="delete_success">delete success</string>
+    <string name="action_calibration">calibration</string>
+    <string name="action_get_config">Get Config</string>
+    <string name="action_set_config">Set Config</string>
+    <string name="action_set_detect_mode">Set DetectMode</string>
+    <string name="action_cancel">cacel</string>
+</resources>
