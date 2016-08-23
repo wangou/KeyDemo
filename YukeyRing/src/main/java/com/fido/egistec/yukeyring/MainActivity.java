@@ -35,6 +35,7 @@ public class MainActivity extends Activity implements OnFingerDeleteListener, Fi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FingerPowerManage.setPowerSwitch("1");
         setContentView(R.layout.activity_main);
         mUkey = YouKeyUWrapper.getInstance();
         mUkey.registOnFingerDelete(this);
@@ -200,6 +201,7 @@ public class MainActivity extends Activity implements OnFingerDeleteListener, Fi
         super.onDestroy();
         mUkey.finalize();
         FingerPowerManage.setPowerSwitch("0");
+        android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     @Override

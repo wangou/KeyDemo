@@ -101,13 +101,13 @@ public class VerifyKeyActivity extends Activity implements FingerVerifyListener 
     }
 
     private void updateFPView() {
+        runOnUiThread(new ToastRunnable(VerifyKeyActivity.this, getString(R.string.verify_success)));
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 if (mVerified) {
                     mVerifybtn.setImageDrawable(getResources().getDrawable(R.drawable.key_8_p));
                     mVerifybtn.invalidate();
-                    runOnUiThread(new ToastRunnable(VerifyKeyActivity.this, getString(R.string.verify_success)));
                     new CountDownTimer(1000, 500) {
                         public void onTick(long m) {
                         }

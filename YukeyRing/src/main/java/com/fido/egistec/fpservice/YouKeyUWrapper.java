@@ -157,6 +157,8 @@ public class YouKeyUWrapper {
                 Log.e(TAG, "status general error");
                 break;
             case (byte) 0xf1:
+                FingerPowerManage.setPowerSwitch("0");
+                FingerPowerManage.setPowerSwitch("1");
                 Log.e(TAG, "status sync byte error");
                 break;
             case (byte) 0xf2:
@@ -333,6 +335,11 @@ public class YouKeyUWrapper {
 
     public void sendCommand(byte[] cmd) {
         byte[] buffer = CRC16.CalcCRC16Kermit(cmd);
+        if (mOutputStream == null) {
+            gUWrapper = new YouKeyUWrapper();
+            sendCommand(cmd);
+            return;
+        }
         try {
             mOutputStream.write(buffer);
             mOutputStream.flush();

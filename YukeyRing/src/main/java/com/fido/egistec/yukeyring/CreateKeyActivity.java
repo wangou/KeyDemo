@@ -126,9 +126,8 @@ public class CreateKeyActivity extends Activity implements FingerEnrollListener 
                     mEnrollbtn.setImageDrawable(getResources().getDrawable(pListfp.get((nCounter++) % ENROLL_MAX_SIZE)));
                     mEnrollbtn.invalidate();
                     nCounter = 0;
-                    final Toast toast = Toast.makeText(getApplicationContext(), R.string.create_success, Toast.LENGTH_SHORT);
-                    toast.show();
-                    new CountDownTimer(3000, 500) {
+                    Toast.makeText(getApplicationContext(), R.string.create_success, Toast.LENGTH_SHORT).show();
+                    new CountDownTimer(1000, 500) {
                         public void onTick(long m) {
                         }
 
